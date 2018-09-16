@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const [, , email] = process.argv
+const email = 'nikhilkuyya@gmail.com'
 
 if (!email) {
   throw new Error('You must provide an email address as an argument')
