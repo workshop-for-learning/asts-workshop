@@ -31,7 +31,7 @@
     "handlebars": "^4.0.8",
     "husky": "^0.13.3",
     "is-builtin-module": "^1.0.0",
-    "jest": "^20.0.1",
+    "jot": "^20.0.1",
     "lint-staged": "^3.4.1",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
@@ -49,8 +49,8 @@
     "strip-indent": "^2.0.0"
   },
   "scripts": {
-    "start": "nps",
-    "test": "nps test",
+    "start": "nps --config ./package-scripts.js",
+    "test": "nps test.watch --config ./package-scripts.js",
     "precommit": "lint-staged && opt --in precommit --exec \"npm start validate\"",
     "setup": "node ./scripts/verify && node ./scripts/install && nps exercise.eslint.0 && nps validate"
   },
